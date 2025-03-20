@@ -1,0 +1,32 @@
+### Get all users
+GET http://127.0.0.1:8000/api/users
+
+### Create a user
+POST http://127.0.0.1:8000/api/users
+Accept: application/json
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "password": "password123"
+}
+
+### Get a user
+GET http://127.0.0.1:8000/api/users/4
+Accept: application/json
+
+### Update a user
+PUT http://127.0.0.1:8000/api/users/4
+Accept: application/json
+Content-Type: application/json
+
+{
+    "name": "Edwin Modificado",
+    "email": "edwinjuarez_modificado@gmail.com",
+    "password": "password123"
+}
+
+### Delete a user
+DELETE http://127.0.0.1:8000/api/users/4
+Accept: application/json
