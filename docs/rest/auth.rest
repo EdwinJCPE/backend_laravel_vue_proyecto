@@ -1,0 +1,19 @@
+### Login
+POST http://127.0.0.1:8000/api/v1/auth/login
+Accept: application/json
+Content-Type: application/json
+
+{
+    "email": "juan@gmail.com",
+    "password": "password123"
+}
+
+### profile
+GET  http://127.0.0.1:8000/api/v1/auth/profile
+Accept: application/json
+Authorization: Bearer 4|MgmC1awGSTeK7QhRYtnjmWFATPbKMmO8XLILIkxt16a6288a
+
+### Logout
+POST  http://127.0.0.1:8000/api/v1/auth/logout
+Accept: application/json
+Authorization: Bearer 3|jnZM6ZRpJlI9sMRdBLJ5GwpbBUiPLJsEwOLhGEtG09221130

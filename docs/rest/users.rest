@@ -1,5 +1,7 @@
 ### Get all users
 GET http://127.0.0.1:8000/api/users
+Accept: application/json
+Authorization: Bearer 4|MgmC1awGSTeK7QhRYtnjmWFATPbKMmO8XLILIkxt16a6288a
 
 ### Create a user
 POST http://127.0.0.1:8000/api/users
@@ -7,8 +9,8 @@ Accept: application/json
 Content-Type: application/json
 
 {
-    "name": "John Doe",
-    "email": "john.doe@example.com",
+    "name": "juan",
+    "email": "juan@gmail.com",
     "password": "password123"
 }
 
@@ -28,5 +30,5 @@ Content-Type: application/json
 }
 
 ### Delete a user
-DELETE http://127.0.0.1:8000/api/users/4
+DELETE http://127.0.0.1:8000/api/users/1
 Accept: application/json

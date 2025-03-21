@@ -23,7 +23,9 @@ class UserController extends Controller
         // Eloquent ORM
         // $users = User::all();
         $users = User::get();
-        return response()->json(['data' => $users], 200);
+        return response()->json([
+            'data' => $users
+        ], 200);
     }
 
     /**
@@ -43,7 +45,9 @@ class UserController extends Controller
             'password' => $request->password,
         ]);
 
-        return response()->json(['message' => 'User created successfully'], 201);
+        return response()->json([
+            'message' => 'User created successfully'
+        ], 201);
         // return response()->json(['data' => $user], 201);
     }
 
@@ -53,7 +57,9 @@ class UserController extends Controller
     public function show(string $id)
     {
         $user = User::findOrFail($id);
-        return response()->json(['data' => $user], 200);
+        return response()->json([
+            'data' => $user
+        ], 200);
     }
 
     /**
@@ -71,7 +77,9 @@ class UserController extends Controller
 
         $user->update($validatedData);
 
-        return response()->json(['message' => 'User updated successfully'], 200);
+        return response()->json([
+            'message' => 'User updated successfully'
+        ], 200);
         // return response()->json(['data' => $user], 200);
     }
 
@@ -82,6 +90,8 @@ class UserController extends Controller
     {
         $user = User::findOrFail($id);
         $user->delete();
-        return response()->json(['message' => 'User deleted successfully'], 200);
+        return response()->json([
+            'message' => 'User deleted successfully'
+        ], 200);
     }
 }
